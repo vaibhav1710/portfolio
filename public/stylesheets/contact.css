@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:400,700&display=swap');
+
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway";
+}
+
+#navbar {
+  background: rgb(194, 243, 238);
+  background: radial-gradient(circle,       rgb(159, 240, 233) 0%,              rgb(148, 233, 209) 100%);
+  padding: 10px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+
+}
+
+.navbar li {
+  display: inline;
+}
+
+.navbar li a {
+  display: center;
+  text-align: center;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.navbar li a:hover {
+  background-color: #ddd;
+  
+}
+
+body{
+    background-color: #dadada;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column; 
+  position: relative;
+ 
+}
+
+.contact-header {
+  font-family: "Montserrat", sans-serif;
+  margin: 10rem 10rem 3rem 10rem;
+  text-align: center;
+}
+
+#co-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+#co-text {
+  font-size: 3rem;
+  color: #000;
+  padding-bottom: 2rem;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  line-height: 2;
+  height: auto;
+  width: 70%;
+  background-color:#dadada;
+  margin-bottom: 10rem;
+}
+
+.contact-form {
+  font-family: "Montserrat", sans-serif;
+  padding: 5rem;
+  
+}
+
+#form-title {
+  color: #000;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  line-height: 1px;
+  margin-left: 4rem;
+  margin-bottom: 3rem;
+}
+
+fieldset {
+  border: none;
+}
+
+.form-field {
+    outline: none;
+    width: 200%;
+    border-bottom: 2px solid #000;
+    margin-bottom: .9rem;
+}
+
+#name, #email, #subject, #message {
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+  outline: none;
+  background: transparent;
+  border: none;
+  letter-spacing: 2px;
+  font-size: .6rem;
+  line-height: 2rem;
+  padding-bottom: 0.7rem;
+}
+
+textarea, #message {
+  width: 100%;
+  color: #000;
+  
+  overflow: visible;
+}
+
+/* #form-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  border: none;
+  color: white;
+  font-size: 0.6rem;
+  letter-spacing: 2.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: 200%;
+  height: 60px;
+  background-color: #c31432;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+#form-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2.5%);
+  box-shadow: 0 0 15px 0 #000;
+} */
+
+.btn{
+    padding: 10px 30px;
+    font-size: 20px;
+    margin-left: 5px;
+    color: #000;
+}
+ .btn-primary{
+    background: rgb(254, 178, 36);
+    border: 2px solid rgb(254, 179, 36);
+  }
+  .btn-primary:Hover{
+    background: rgb(247, 243, 243);
+    border: 2px solid black;
+  }
+  .btn-default{
+    background: white;
+    border: 2px solid white;
+    color: black;
+  }
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 5rem;
+  background-color: #dadada;
+}
+
+.contact-info h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: #000;
+}
+
+.contact-info a {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  color: #000;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  line-height: 3rem;
+  margin-bottom: 5rem;
+  transition: all .3s ease;
+}
+
+.contact-info a:hover {
+  transform: translateY(-2.5%);
+  color: rgb(255, 168, 6);;
+}
+
+.contact-info .fab {
+  font-size: 1.5rem;
+  line-height: 3rem;
+  padding-left: 2rem;
+  color: #dadada;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.fab:hover{
+  transform: scale(1.2);
+  color: #dadada;
+}
+
+
+@media screen and (max-width: 960px) {
+  .contact-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-field {
+    width: 100%;
+  }
+  
+  #form-btn {
+    width: 100%;
+  }
+  
+  #form-title {
+    margin: 3rem auto;
+  }
+  
+  .contact-header{
+    margin: 5rem 5rem 3rem 5rem;
+  }
+  
+  #co-title {
+    font-size: 1rem;
+  }
+  
+  #co-text {
+    font-size: 2.5rem;
+  }
+  
+  .contact-form {
+    padding: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .form-field {
+    width: 125%;
+  }
+  
+  #form-title {
+    margin: 3rem auto;
+  }
+  
+  #form-btn {
+    width: 125%;
+  }
+  
+  .contact-header{
+    margin: 7rem 7rem 3rem 7rem;
+  }
+  
+  .contact-info {
+    padding: 5rem;
+  }
+  
+  #co-title {
+    font-size: 1rem;
+  }
+  
+  #co-text {
+    font-size: 2.5rem;
+  }
+  
+  .contact-form {
+    padding: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1460px) {
+  .form-field {
+    width: 200%;
+  }
+  
+  #form-btn {
+    width: 200%;
+  }
+}
+
+
+.footer {
+  position: relative;
+  padding: 4em 0em 0em 0em;
+  margin-top: 4em;
+  text-align: center;
+  background: #dadada(255, 255, 255);
+  color: rgb(0, 0, 0);
+  background: #dadada;
+}
+
+.footer .link_icon {
+  /* border: 1px solid #000; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.footer .link_icon div {
+  /* border: 1px solid #000; */
+  margin: 0em 0.4em;
+}
+
+.footer .link_icon div img {
+  transition: margin 0.3s ease-in-out;
+}
+
+.footer .link_icon div:hover img {
+  width: 40px;
+  z-index: 34343;
+  margin: auto 1em;
+  border-radius: 1em;
+ 
+}
+
+.footer .link_icon div:active {
+  transform: translateY(3px);
+}
+
+div.copyright {
+  text-align: center;
+  display: block;
+}
+
+div.copyright p {
+  text-align: center;
+  display: block;
+  /* border: 1px solid #000; */
+  font-size: 1.2rem;
+  letter-spacing: 0.14rem;
+  line-height: 4.24rem;
+}
+
+.waves {
+  /* border: 2px solid #000; */
+  height: 90px;
+  position: relative;
+  width: 100%;
+}
+
+.parallax > use {
+  background: #000;
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+  background: #000;
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+  background: #000;
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
