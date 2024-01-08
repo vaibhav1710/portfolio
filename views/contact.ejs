@@ -6,8 +6,16 @@
     <title>Vaibhav Singh - Contact</title>
     <link rel="stylesheet" href="stylesheets/contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-ZoeKBD+4NYeWg/8CF1a5EwI6O0JeqY4Mdj1cfXs5l0U=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+
+  
+
+
+ 
+ 
+
     <div class="navbar">
         <ul>
           <li><a href="/">Home</a></li>
@@ -29,7 +37,7 @@
           <form action="/submit" method="post">
             <fieldset>
               <div class="form-field">
-                <input name="name" type="text" id="name" placeholder="Your Name"></input>
+                <input name="name" type="text"  id="name" placeholder="Your Name"></input>
               </div>
             <div class="form-field">
                 <input name="email" type="email" id="email" placeholder="Your Email"></input>
@@ -38,10 +46,10 @@
                 <input name="Subject" type="text" id="subject" placeholder="Subject"></input>
               </div>
           <div class="form-field">
-                <textarea name="message" type="text" id="message" placeholder="Your Message"></textarea>
+                <textarea name="message" rows="4" cols="50" maxlength="200" type="text" id="message" placeholder="Your Message"></textarea>
               </div>
             </fieldset>
-        <input class="btn btn-primary" type="submit" value="send">
+        <input class="btn btn-primary" id="tostme" type="submit" value="send">
           </form>
       </div>
         
@@ -88,24 +96,87 @@
         </div>
         <div class="copyright">
          
-            <p >Copyright © 2023 vaibhavsingh17</p>
-          
-        </div>
-        <div>
-          <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-            <defs>
-              <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-            </defs>
-            <g class="parallax">
-              <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(254, 179, 36, .7)" />
-              <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(254, 179, 36,.5)" />
-              <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(254, 179, 36, .3)" />
-              <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(254, 179,36)" />
-            </g>
-          </svg>
-        </div>
+          <p >Copyright © 2023 vaibhavsingh17</p>
+        
+      </div>
+      <div>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+          <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+          </defs>
+          <g class="parallax">
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(254, 179, 36, .7)" />
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(254, 179, 36,.5)" />
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(254, 179, 36, .3)" />
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(254, 179,36)" />
+          </g>
+        </svg>
       </div>
     </div>
+  </div>
 
+
+  <% if (success == "Sent Successfully") { %>
+   <div class="toast active">
+    <div class="toast-content">
+      <i class="fas fa-solid fa-check check"></i>
+      <div class="message">
+        <span class="text text-1"><%= success %></span>
+      </div>
+    </div>
+    <i class="fa-solid fa-xmark close"></i>
+  </div>
+
+  <script> 
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const flashMessage = document.getElementById('flash-message');
+      const progressBar = document.getElementById('progress-bar');
+
+      // Display the flash message
+      flashMessage.style.display = 'block';
+
+      // Set the duration for the flash message (in milliseconds)
+      const duration = 5000;
+
+      // Set the progress bar width to animate
+      progressBar.style.width = '100%';
+
+      //Hide the flash message and progress bar after the specified duration
+      setTimeout(function () {
+        flashMessage.style.display = 'none';
+        progressBar.style.width = '0';
+      }, duration);
+    }); 
+
+       toast = document.querySelector(".toast");
+       (closeIcon = document.querySelector(".close")),
+       (progress = document.querySelector(".progress"));
+
+let timer1, timer2;
+ 
+document.addEventListener("DOMContentLoaded", () => {
+  toast.classList.add("active");
+  progress.classList.add("active");
+
+  timer1 = setTimeout(() => {
+    toast.classList.remove("active");
+  }, 5000); //1s = 1000 milliseconds
+
+  timer2 = setTimeout(() => {
+    progress.classList.remove("active");
+  }, 5300);
+});
+
+ closeIcon.addEventListener("click", () => {
+  toast.classList.add("display-none");
+
+  setTimeout(() => {
+    progress.classList.remove("active");
+  }, 300);
+});
+ 
+</script>
+  <% } %>
 </body>
 </html>

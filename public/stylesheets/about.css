@@ -50,9 +50,11 @@
     font-size: 20px;
     margin-left: 5px;
     color: #000;
+    transition: background-color 0.3s ease;
 }
  .btn-primary{
     background: rgb(254, 178, 36);
+    transition: background-color 0.3s ease;
     border: 2px solid rgb(254, 179, 36);
   }
   .btn-primary:Hover{
@@ -175,4 +177,32 @@ div.copyright p {
   100% {
     transform: translate3d(85px, 0, 0);
   }
+}
+
+@media only screen and (max-width: 800px) {
+  .navbar li a {
+    padding: 10px;
+  }
+  .btn {
+    padding: 8px 16px;
+    font-size: 1.2em;
+  }
+  .waves {
+    height: 60px;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+  .skill_span img {
+    width: 60px;
+  }
+}
+
+
+
+.btn-primary.pulsing {
+  animation: pulse 1s infinite;
 }

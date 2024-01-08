@@ -24,8 +24,8 @@ router.post("/submit", async(req,res) => {
     // Save form data to MongoDB
     const newContact = new Contact({ fullName, email,subject,message });
     await newContact.save();
-    req.flash("success", 111);
-    res.redirect("/after");
+    req.flash('success', 'Sent Successfully');
+    res.redirect("/contact");
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: 'Internal Server Error' });
@@ -33,14 +33,14 @@ router.post("/submit", async(req,res) => {
 });
 
 
-router.get('/after', (req, res) => {
-   const flashMessage = req.flash("success");
-  if(flashMessage==111){
-     res.send("Successfully Sent");
-  }else{
-    res.send("Failed!");
-  }
-}); 
+// router.get('/after', (req, res) => {
+//    const flashMessage = req.flash("success");
+//   if(flashMessage==111){
+//      res.send("Successfully Sent");
+//   }else{
+//     res.send("Failed!");
+//   }
+// }); 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index');
@@ -53,7 +53,8 @@ router.get("/project", function(req,res,next){
   res.render("project");
 })
 router.get("/contact", function(req,res,next){
-  res.render("contact");
+  const success = req.flash("success");
+  res.render("contact",{success});
 })
 
 module.exports = router;

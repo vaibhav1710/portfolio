@@ -14,6 +14,10 @@
 
 .navbar{
   background-color: #dadada;
+  margin: auto;
+  display: flex;
+  margin-bottom: 12vh;
+  justify-content: center;
 }
 
 .navbar ul {
@@ -21,7 +25,6 @@
   margin: 0;
   padding: 10px;
   text-align: center;
-
 }
 
 .navbar li {
@@ -40,23 +43,22 @@
 
 .navbar li a:hover {
   background-color: #ddd;
-  
 }
 
-body {
+ body {
     margin: 0;
     padding: 0;
     font-family: "Raleway";
     background-color: #dadada;
 }
-
+/*
 header {
     text-align: center;
     background: linear-gradient(45deg, #3498db, #e74c3c);
     color: #fff;
     padding: 20px 0;
 }
-
+*/
 
 .content {
     padding: 40px;
@@ -68,24 +70,11 @@ header {
     animation: fadeIn 2s ease-out;
 }
 
-.project {
-    margin: 20px 0;
-    padding: 10px;
-    background-color: #dadada;
-    background: linear-gradient(45deg, #fff, #f0f0f0);
-    border: 1px solid #dadada;
-    border-radius: 5px;
-}
-
-.project a{
-  text-decoration: none;
-}
 
 
 .btn{
-    padding: 10px 30px;
+    padding: 5px 10px;
     font-size: 20px;
-    margin-left: 5px;
     color: #000;
 }
  .btn-primary{
@@ -187,6 +176,26 @@ header {
     animation-delay: -5s;
     animation-duration: 20s;
   }
+ 
+  .card{
+    width: calc(25% - 20px);
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+
+  .projects{
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+  }
+
+  .row{
+    width:80vw;
+    margin: auto;
+  }
 
   @keyframes move-forever {
     0% {
@@ -195,5 +204,33 @@ header {
   
     100% {
       transform: translate3d(85px, 0, 0);
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+  
+    .navbar li a {
+      padding: 10px;
+    }
+  
+    .btn {
+      padding: 8px 16px;
+      font-size: 1.2em;
+    }
+  
+    .waves {
+      height: 60px;
+    }
+  
+    h1 {
+      font-size: 2em;
+    }
+  
+    h3 {
+      font-size: 1.5em;
+    }
+  
+    .skill_span img {
+      width: 60px;
     }
   }
